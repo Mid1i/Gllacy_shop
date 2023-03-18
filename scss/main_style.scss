@@ -10,6 +10,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0px 30px;
+    position: relative;
 }
 
 .header-top {
@@ -105,5 +106,25 @@ body {
             color: black;
             &::before {content: url("../img/icons-and-logo/cart.png");}
         }
+    }
+}
+
+.header-bottom {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    position: absolute;
+    right: 30px;
+
+    &__timetable {
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0px 0px 8px;
+    }
+
+    &__phone {
+        font-size: 22px;
+        line-height: 24px;
     }
 }
