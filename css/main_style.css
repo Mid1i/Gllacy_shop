@@ -3,12 +3,13 @@ body {
   background: #9D8B84;
   color: white;
   font-family: "Roboto";
+  overflow: hidden;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0px 30px;
+  padding: 0px 2vw;
   position: relative;
 }
 
@@ -19,12 +20,17 @@ body {
   margin: 10px 0px 0px;
 }
 
+.header-menu-burger {
+  display: none;
+}
+
 .header-left {
   align-items: center;
   display: flex;
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
+  position: relative;
 }
 .header-left__logo {
   cursor: pointer;
@@ -34,7 +40,7 @@ body {
 }
 .header-left__list li {
   cursor: pointer;
-  margin: 0px 0px 0px 30px;
+  margin: 0px 0px 0px 3vw;
   text-decoration: underline;
 }
 
@@ -128,4 +134,92 @@ body {
 .header-bottom__phone {
   font-size: 22px;
   line-height: 24px;
+}
+
+@media (max-width: 810px) {
+  .header-menu-burger {
+    display: block;
+    position: relative;
+    margin: 10px 0px;
+    height: 20px;
+    width: 30px;
+    z-index: 3;
+  }
+  .header-menu-burger span {
+    background: #fff;
+    left: 0;
+    top: 9px;
+    height: 2px;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    width: 30px;
+  }
+  .header-menu-burger::before, .header-menu-burger::after {
+    background: #fff;
+    content: "";
+    left: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.3s ease 0s;
+    width: 30px;
+  }
+  .header-menu-burger::before {
+    top: 0px;
+  }
+  .header-menu-burger::after {
+    bottom: 0px;
+  }
+  .header-menu-burger.burger-menu::before {
+    transform: rotate(45deg);
+    top: 9px;
+  }
+  .header-menu-burger.burger-menu span {
+    transform: scale(0);
+  }
+  .header-menu-burger.burger-menu::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+  }
+  .header-left {
+    background: #9D8B84;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    left: 0px;
+    position: fixed;
+    overflow: auto;
+    padding: 6vh 0px;
+    text-align: center;
+    transition: all 0.3s ease 0s;
+    top: -100%;
+    width: 100%;
+    z-index: 2;
+  }
+  .header-left.burger-menu {
+    top: 0px;
+  }
+  .header-left__list {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .header-left__list li {
+    margin: 2vh 0px;
+  }
+  .header-bottom {
+    align-items: center;
+    top: -100%;
+    left: 0px;
+    position: fixed;
+    overflow: auto;
+    width: 100%;
+    z-index: 2;
+  }
+  .header-bottom.burger-menu {
+    top: 90vh;
+  }
+}
+@media (max-width: 810px) and (orientation: landscape) {
+  .header-bottom.burger-menu {
+    top: 80vh;
+  }
 }
