@@ -1,11 +1,12 @@
 $(document).ready(function() {
     $('.slider').slick({
-        speed: 700,
+        speed: 800,
         slidesToShow: 1,
         easing: 'linear',
-        infinite: true,
-        waitForAnimate: true,
-        dots: true,
-        arrows: false
+        waitForAnimation: true,
+        swipe: false,
+        fade: true,
+        arrows: false,
+        dots: true
     });
 });

@@ -1,12 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 @import "./header_style.scss";
+@import "./slider_style.scss";
+
+:root {
+    --basic-white: #ffffff;
+    --basic-black: #000000;
+    --back-color-1: #849D8F;
+    --back-color-2: #8996A6;
+    --back-color-3: #9D8B84;
+    --header-nav-color: rgba(135, 131, 131, 0.695);
+    --button-color: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+    --button-color-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
+    --button-box-color: rgba(172, 16, 0, 0.64);
+    --button-text-color: rgba(160, 32, 11, 0.76);
+
+    --search-icon: url("../img/icons-and-logo/search.png");
+    --search-icon-hover: url("../img/icons-and-logo/search--hover.png");
+    --login-icon: url("../img/icons-and-logo/login.png");
+    --login-icon-hover: url("../img/icons-and-logo/login--hover.png");
+    --cart-icon: url("../img/icons-and-logo/cart.png");
+    --cart-icon-hover: url("../img/icons-and-logo/cart--product.png");
+}
+
 
 body {
-    background: #9D8B84;
-    color: white;
+    background: var(--back-color-1);
+    color: var(--basic-white);
     font-family: "Roboto";
-    overflow: hidden;
+    overflow-x: hidden;
+    transition: background .3s;
 }
 
 .container {
@@ -23,54 +46,18 @@ body {
     min-width: 0;
 }
 
-.slider {
-    width: 90%;
-    min-width: 0;
-    max-width: 1200px;
-    position: relative;
-}
-
-.slider-item {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    height: 700px;
-
-    &__title {
-        font-size: 60px;
-        line-height: 60px;
-        font-weight: 700;
-    }
-
-    &__image {
-        position: absolute;
-        height: 100%;
-        width: 100%;
+.back__image {
+    --back-image: url("../img/background-images/slide-1.png");
     
-        & img { max-width: 100%; }
-    }
+    background: var(--back-image) center 0 no-repeat;
+    background-size: contain;
+    top: -10px;
+    position: absolute;
+    transition: background 1s;
+    height: 95vmin;
+    width: 100vw;   
 }
 
-.slick {
-    &-list { overflow: hidden; }
-    &-track { display: flex; }
-
-    &-dots {
-        display: flex;
-
-        & button {
-            background: transparent;
-            border: 2px solid #fff;
-            border-radius: 100px;
-            font-size: 0px;
-            margin: 0px 4px;
-            height: 20px;
-            width: 20px;
-        }
-
-        & li.slick-active button{
-            background: #fff;
-        }
-    }
+@media(max-width:520px) {
+    .back__image { background-size: 500px 400px}
 }
