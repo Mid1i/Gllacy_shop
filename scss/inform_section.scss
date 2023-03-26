@@ -1,0 +1,52 @@
+/* INFORM SECTION */
+.inform {
+    background: url('../img/background-images/inform_bg.jpg') 0 0 repeat;
+    border-radius: 15px;
+    color: var(--basic-black);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px 20px 30px; 
+    margin: 0px 0px 5vh;
+
+    &__title {
+        flex: 1 1 100%;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    &__text {
+        flex: 0 1 50%;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        margin: 30px 0px;
+        position: relative;
+
+        &:before {
+            margin: 0px 10px 30px 0px;
+            height: 100%;
+            float: left;    
+            top: 0px;
+           
+        }
+    }
+}
+
+.ice-cream::before { content: var(--ice-cream-icon); }
+
+.milk::before { content: var(--milk-icon); }
+
+.ecology::before { content: var(--ecology-icon); }
+
+.temp::before { content: var(--temp-icon); }
+
+@media (max-width: 900px) {
+    .inform__text { flex: 1 1 100%; }
+}
+
+@media (max-width: 520px) {
+    .inform__title { font-size: 4.5vw; line-height: 4.5vw; }
+    .inform { padding: 15px 10px 20px; }
+}

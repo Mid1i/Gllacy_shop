@@ -2,8 +2,9 @@
 
 @import "./header_style.scss";
 @import "./slider_style.scss";
-@import "./gifts_section_style.scss";
+@import "./gifts_section.scss";
 @import "./tastes_section.scss";
+@import "./inform_section.scss";
 
 :root {
     --basic-white: #ffffff;
@@ -27,6 +28,10 @@
     --cart-icon-hover: url("../img/icons-and-logo/cart--product.png");
 
     --hit-icon: url("../img/products/product-hit.png");
+    --ice-cream-icon: url("../img/inform-icons/icon-ice-cream.png");
+    --milk-icon: url("../img/inform-icons/icon-milk.png");
+    --ecology-icon: url("../img/inform-icons/icon-ecology.png");
+    --temp-icon: url("../img/inform-icons/icon-temp.png");
 }
 
 
