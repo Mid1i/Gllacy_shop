@@ -21,19 +21,13 @@
     }
 
     &__button {
-        background: var(--button-color);
-        box-shadow: 0px 2px 2px var(--button-box-color);
-        border-radius: 70px;
-        color: var(--basic-white);
         font-size: 3vmin;
         padding: 9px 25px;
         margin: 25px 0px;
-        text-shadow: 0px 2px 5px var(--button-text-color);
-
-        &:hover { background: var(--button-color-hover); }
     }
 }
 
+/* SLICK SLIDER STYLES */
 .slick {
     &-list { overflow: hidden; }
     &-track { display: flex; }

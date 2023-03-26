@@ -1,0 +1,56 @@
+/* GIFTS SECTION */ 
+.gifts {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5vh 0px 0px;
+    justify-content: space-between;
+
+    &-item {
+        border-radius: 15px;
+        display: flex;
+        flex: 0 1 49%;
+        flex-direction: column;
+        font-weight: 700;
+        padding: 15px;
+        z-index: 1;
+
+        &:first-child { background: url('../img/background-images/raspberry-bg.jpg') 0 0 no-repeat; }
+        &:last-child { background: url('../img/background-images/chocolate-bg.jpg') 0 0 no-repeat; }
+
+        &__title {
+            font-size: 35px;
+            line-height: 41px;
+        }
+
+        &__text {
+            font-size: 18px;
+            line-height: 22px;
+            margin: 16px 0px;
+        }
+
+        &__button {
+            align-self: flex-end;
+            font-size: 18px;
+            line-height: 22px;
+            padding: 15px 20px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .gifts { justify-content: center; }
+
+    .gifts-item { 
+        flex: 0 1 90%; 
+        &:last-child { margin: 20px 0px 0px; }
+    }
+}
+
+@media (max-width: 520px) {
+    .gifts-item__title { font-size: 7vw; line-height: 7vw;}
+
+    .gifts-item__text { font-size: 3.5vw; line-height: 4vw; margin: 10px 0px; }
+
+    .gifts-item__button { font-size: 3vmin; padding: 9px 20px; }
+}

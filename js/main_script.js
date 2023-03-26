@@ -26,6 +26,7 @@ slider.addEventListener("click", () => {
 
 document.addEventListener('click', (event) => {
     if (event.target.classList.contains('header-menu-burger')) {
-        $(".header-menu-burger, .header-left, .header-bottom").toggleClass("burger-menu");    
+        $(".header-menu-burger, .header-left, .header-bottom").toggleClass("burger-menu"); 
+        $("body").toggleClass("lock");   
     }
 });

@@ -47,6 +47,7 @@
   padding: 8px;
   height: 32px;
   width: 32px;
+  z-index: 1;
 }
 .header-right__search::before {
   content: var(--search-icon);
@@ -68,6 +69,7 @@
   padding: 0px 16px;
   height: 32px;
   width: 100px;
+  z-index: 1;
 }
 .header-right__login::before {
   content: var(--login-icon);
@@ -92,6 +94,7 @@
   padding: 0px 16px;
   height: 32px;
   width: 100px;
+  z-index: 1;
 }
 .header-right__cart::before {
   content: var(--cart-icon);
@@ -125,6 +128,9 @@
 }
 
 @media (max-width: 810px) {
+  body.lock {
+    overflow: hidden;
+  }
   .header-menu-burger {
     display: block;
     position: relative;

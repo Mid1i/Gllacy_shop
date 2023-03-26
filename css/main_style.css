@@ -47,6 +47,7 @@
   padding: 8px;
   height: 32px;
   width: 32px;
+  z-index: 1;
 }
 .header-right__search::before {
   content: var(--search-icon);
@@ -68,6 +69,7 @@
   padding: 0px 16px;
   height: 32px;
   width: 100px;
+  z-index: 1;
 }
 .header-right__login::before {
   content: var(--login-icon);
@@ -92,6 +94,7 @@
   padding: 0px 16px;
   height: 32px;
   width: 100px;
+  z-index: 1;
 }
 .header-right__cart::before {
   content: var(--cart-icon);
@@ -125,6 +128,9 @@
 }
 
 @media (max-width: 810px) {
+  body.lock {
+    overflow: hidden;
+  }
   .header-menu-burger {
     display: block;
     position: relative;
@@ -234,19 +240,12 @@
   line-height: 6vmin;
 }
 .slider-item__button {
-  background: var(--button-color);
-  box-shadow: 0px 2px 2px var(--button-box-color);
-  border-radius: 70px;
-  color: var(--basic-white);
   font-size: 3vmin;
   padding: 9px 25px;
   margin: 25px 0px;
-  text-shadow: 0px 2px 5px var(--button-text-color);
-}
-.slider-item__button:hover {
-  background: var(--button-color-hover);
 }
 
+/* SLICK SLIDER STYLES */
 .slick-list {
   overflow: hidden;
 }
@@ -281,22 +280,88 @@
     margin: 10px 0px;
   }
 }
+/* GIFTS SECTION */
+.gifts {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5vh 0px 0px;
+  justify-content: space-between;
+}
+.gifts-item {
+  border-radius: 15px;
+  display: flex;
+  flex: 0 1 49%;
+  flex-direction: column;
+  font-weight: 700;
+  padding: 15px;
+  z-index: 1;
+}
+.gifts-item:first-child {
+  background: url("../img/background-images/raspberry-bg.jpg") 0 0 no-repeat;
+}
+.gifts-item:last-child {
+  background: url("../img/background-images/chocolate-bg.jpg") 0 0 no-repeat;
+}
+.gifts-item__title {
+  font-size: 35px;
+  line-height: 41px;
+}
+.gifts-item__text {
+  font-size: 18px;
+  line-height: 22px;
+  margin: 16px 0px;
+}
+.gifts-item__button {
+  align-self: flex-end;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 15px 20px;
+}
+
+@media (max-width: 767px) {
+  .gifts {
+    justify-content: center;
+  }
+  .gifts-item {
+    flex: 0 1 90%;
+  }
+  .gifts-item:last-child {
+    margin: 20px 0px 0px;
+  }
+}
+@media (max-width: 520px) {
+  .gifts-item__title {
+    font-size: 7vw;
+    line-height: 7vw;
+  }
+  .gifts-item__text {
+    font-size: 3.5vw;
+    line-height: 4vw;
+    margin: 10px 0px;
+  }
+  .gifts-item__button {
+    font-size: 3vmin;
+    padding: 9px 20px;
+  }
+}
 :root {
   --basic-white: #ffffff;
   --basic-black: #000000;
   --back-color-1: #849D8F;
   --back-color-2: #8996A6;
   --back-color-3: #9D8B84;
+  --btn-color-1: #F26843;
+  --btn-color-2: #E74A35;
+  --btn-hover-color-1: rgba(255, 255, 255, 0.2);
   --header-nav-color: rgba(135, 131, 131, 0.695);
-  --button-color: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-  --button-color-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
   --button-box-color: rgba(172, 16, 0, 0.64);
   --button-text-color: rgba(160, 32, 11, 0.76);
   --search-icon: url("../img/icons-and-logo/search.png");
-  --search-icon-hover: url("../img/icons-and-logo/search--hover.png");
   --login-icon: url("../img/icons-and-logo/login.png");
-  --login-icon-hover: url("../img/icons-and-logo/login--hover.png");
   --cart-icon: url("../img/icons-and-logo/cart.png");
+  --search-icon-hover: url("../img/icons-and-logo/search--hover.png");
+  --login-icon-hover: url("../img/icons-and-logo/login--hover.png");
   --cart-icon-hover: url("../img/icons-and-logo/cart--product.png");
 }
 
@@ -333,8 +398,20 @@ body {
   width: 100vw;
 }
 
+.button {
+  background: -webkit-linear-gradient(180deg, var(--btn-color-1) 0%, var(--btn-color-2) 100%);
+  box-shadow: 0px 2px 2px var(--button-box-color);
+  border-radius: 70px;
+  color: var(--basic-white);
+  text-shadow: 0px 2px 5px var(--button-text-color);
+}
+.button:hover {
+  background: -webkit-linear-gradient(0deg, var(--btn-hover-color-1), var(--btn-hover-color-1)), -webkit-linear-gradient(180deg, var(--btn-color-1) 0%, var(--btn-color-2) 100%);
+}
+
 @media (max-width: 520px) {
   .back__image {
     background-size: 500px 400px;
+    height: 500px;
   }
 }

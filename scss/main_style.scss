@@ -2,6 +2,7 @@
 
 @import "./header_style.scss";
 @import "./slider_style.scss";
+@import "./gifts_section_style.scss";
 
 :root {
     --basic-white: #ffffff;
@@ -9,17 +10,18 @@
     --back-color-1: #849D8F;
     --back-color-2: #8996A6;
     --back-color-3: #9D8B84;
+    --btn-color-1: #F26843;
+    --btn-color-2: #E74A35;
+    --btn-hover-color-1: rgba(255, 255, 255, 0.2);
     --header-nav-color: rgba(135, 131, 131, 0.695);
-    --button-color: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
-    --button-color-hover: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #F26843 0%, #E74A35 100%);
     --button-box-color: rgba(172, 16, 0, 0.64);
     --button-text-color: rgba(160, 32, 11, 0.76);
 
     --search-icon: url("../img/icons-and-logo/search.png");
-    --search-icon-hover: url("../img/icons-and-logo/search--hover.png");
     --login-icon: url("../img/icons-and-logo/login.png");
-    --login-icon-hover: url("../img/icons-and-logo/login--hover.png");
     --cart-icon: url("../img/icons-and-logo/cart.png");
+    --search-icon-hover: url("../img/icons-and-logo/search--hover.png");
+    --login-icon-hover: url("../img/icons-and-logo/login--hover.png");
     --cart-icon-hover: url("../img/icons-and-logo/cart--product.png");
 }
 
@@ -55,9 +57,22 @@ body {
     position: absolute;
     transition: background 1s;
     height: 95vmin;
-    width: 100vw;   
+    width: 100vw;
 }
 
-@media(max-width:520px) {
-    .back__image { background-size: 500px 400px}
+.button {
+    background: -webkit-linear-gradient(180deg, var(--btn-color-1) 0%, var(--btn-color-2) 100%);;
+    box-shadow: 0px 2px 2px var(--button-box-color);
+    border-radius: 70px;
+    color: var(--basic-white);
+    text-shadow: 0px 2px 5px var(--button-text-color);
+
+    &:hover { 
+        background: -webkit-linear-gradient(0deg, var(--btn-hover-color-1), var(--btn-hover-color-1)), 
+                    -webkit-linear-gradient(180deg, var(--btn-color-1) 0%, var(--btn-color-2) 100%); 
+    }
+}
+
+@media (max-width: 520px) {
+    .back__image { background-size: 500px 400px; height: 500px; }
 }

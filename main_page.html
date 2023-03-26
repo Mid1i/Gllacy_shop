@@ -1,90 +1,93 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <!-- Page encoding -->
-        <meta charset="UTF-8">
-        <!-- Page title -->
-        <title>Gllacy Shop</title>
-        <!-- Adaptive -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-        <!-- Connecting CSS styles -->
-        <link rel="stylesheet" href="./css/reset_style.css">
-        <link rel="stylesheet" href="./css/main_style.css">
-        <!-- Connecting site icons -->
-        <link rel="icon" href="./img/site-icons/favicon.ico">
-        <link rel="icon" type="image/png" sizes="32x32" href="./img/site-icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./img/site-icons/favicon-16x16.png">
-        <!-- Connecting site icons on mobile phones and in modern browsers -->
-        <link rel="apple-touch-icon" sizes="76x76" href="./img/site-icons/apple-touch-icon.png">
-        <link rel="manifest" href="./img/site-icons/site.webmanifest">
-        <!-- Connecting JQuery -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>      
-    </head>
-    <body>
-        <div class="container">
-            <header>
-                <section class="header-top">
-                    <section class="header-menu-burger">
-                        <span></span>
-                    </section>
-                    <section class="header-left">
-                        <div class="header-left__logo">
-                            <a href="">
-                                <img src="./img/icons-and-logo/logo.svg" alt="Логотип магазина 'Gllacy Shop'">
-                            </a>
-                        </div>
-                        <nav>
-                            <ul class="header-left__list">
-                                <li><a href="">Каталог</a></li>
-                                <li><a href="">Доставка и оплата</a></li>
-                                <li><a href="">О компании</a></li>
-                            </ul>
-                        </nav>
-                    </section>
-                    <section class="header-right">
-                        <div class="header-right__search"></div>
-                        <div class="header-right__login">Вход</div>
-                        <div class="header-right__cart">Пусто</div>
-                    </section>
+<head>
+    <!-- Page encoding -->
+    <meta charset="UTF-8">
+    <!-- Page title -->
+    <title>Gllacy Shop</title>
+    <!-- Adaptive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <!-- Connecting CSS styles -->
+    <link rel="stylesheet" href="./css/reset_style.css">
+    <link rel="stylesheet" href="./css/main_style.css">
+    <!-- Connecting site icons -->
+    <link rel="icon" href="./img/site-icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/site-icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/site-icons/favicon-16x16.png">
+    <!-- Connecting site icons on mobile phones and in modern browsers -->
+    <link rel="apple-touch-icon" sizes="76x76" href="./img/site-icons/apple-touch-icon.png">
+    <link rel="manifest" href="./img/site-icons/site.webmanifest">
+    <!-- Connecting JQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>      
+</head>
+<body>
+    <section class="container">
+        <header>
+            <section class="header-top">
+                <section class="header-menu-burger">
+                    <span></span>
                 </section>
-                <section class="header-bottom">
-                    <div class="header-bottom__timetable">с 10 до 20, ежедневно</div>
-                    <div class="header-bottom__phone">
-                        <a href="tel:88124502525">8 812 450-25-25</a>
+                <section class="header-left">
+                    <div class="header-left__logo">
+                        <a href="">
+                            <img src="./img/icons-and-logo/logo.svg" alt="Логотип магазина 'Gllacy Shop'">
+                        </a>
                     </div>
+                    <nav>
+                        <ul class="header-left__list">
+                            <li><a href="">Каталог</a></li>
+                            <li><a href="">Доставка и оплата</a></li>
+                            <li><a href="">О компании</a></li>
+                        </ul>
+                    </nav>
                 </section>
-            </header>
-            <section class="content">
-                <div class="back__image"></div>
-                <section class="slider">
-                    <section class="slider-item">
-                        <h2  class="slider-item__title">Крем-брюле и пломбир с малиновым джемом</h2>
-                        <div class="slider-item__image">
-                            <!-- <img src="./img/background-images/slide-1.png" alt=""> -->
-                        </div>
-                        <button class="slider-item__button">Давайте оба!</button>
-                    </section>
-                    <section class="slider-item">
-                        <h2 class="slider-item__title">Шоколадный пломбир и лимонный щербет</h2>
-                        <div class="slider-item__image">
-                            <!-- <img src="./img/background-images/slide-2.png" alt=""> -->
-                        </div>
-                        <button  class="slider-item__button">Давайте оба!</button>
-                    </section>
-                    <section class="slider-item">
-                        <h2  class="slider-item__title">Пломбир с помадкой и клубничный щербет</h2>
-                        <div class="slider-item__image">
-                            <!-- <img src="./img/background-images/slide-3.png" alt=""> -->
-                        </div>
-                        <button  class="slider-item__button">Давайте оба!</button>
-                    </section>
+                <section class="header-right">
+                    <div class="header-right__search"></div>
+                    <div class="header-right__login">Вход</div>
+                    <div class="header-right__cart">Пусто</div>
                 </section>
             </section>
-        </div>    
-    </body>
-    <!-- Connecting Slick Slider -->
-    <script type="text/javascript" src="./js/slick.min.js"></script>
-    <!-- Connecting JavaScript -->
-    <script src="js/main_script.js"></script>
-    <script src="js/slider.js"></script>
+            <section class="header-bottom">
+                <div class="header-bottom__timetable">с 10 до 20, ежедневно</div>
+                <div class="header-bottom__phone">
+                    <a href="tel:88124502525">8 812 450-25-25</a>
+                </div>
+            </section>
+        </header>
+        <section class="content">
+            <div class="back__image"></div>
+            <section class="slider">
+                <section class="slider-item">
+                    <h2  class="slider-item__title">Крем-брюле и пломбир с малиновым джемом</h2>
+                    <button class="slider-item__button button">Давайте оба!</button>
+                </section>
+                <section class="slider-item">
+                    <h2 class="slider-item__title">Шоколадный пломбир и лимонный щербет</h2>
+                    <button  class="slider-item__button button">Давайте оба!</button>
+                </section>
+                <section class="slider-item">
+                    <h2  class="slider-item__title">Пломбир с помадкой и клубничный щербет</h2>
+                    <button  class="slider-item__button button">Давайте оба!</button>
+                </section>
+            </section>
+            <section class="gifts">
+                <section class="gifts-item">
+                    <h3 class="gifts-item__title">Малинка даром!</h3>
+                    <p class="gifts-item__text">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+                    <button class="gifts-item__button button">Хочу варенье!</button>
+                </section>
+                <section class="gifts-item">
+                    <h3 class="gifts-item__title">Шоколадки даром!</h3>
+                    <p class="gifts-item__text">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+                    <button class="gifts-item__button button">Хочу шоколадки!</button>
+                </section>
+            </section>
+        </section>
+    </section>    
+</body>
+<!-- Connecting Slick Slider -->
+<script type="text/javascript" src="./js/slick.min.js"></script>
+<!-- Connecting JavaScript -->
+<script src="js/main_script.js"></script>
+<script src="js/slider.js"></script>
 </html>
