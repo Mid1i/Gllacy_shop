@@ -1,0 +1,94 @@
+/* TASTES SECTION */
+.tastes {
+    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        position: relative;
+        margin: 0px 0px 5vh;
+
+        &__image { 
+            position: relative; 
+        
+            & img { max-width: 100%; }
+
+            &::before {
+                content: var(--hit-icon);
+                position: absolute;    
+            }
+        }
+
+        &__price {
+            font-weight: 700;
+            font-size: 45px;
+            line-height: 45px;
+            position: absolute;
+            top: 75%;
+            left: 0px;
+
+            &::after {
+                content: "/кг";
+                font-size: 30px;
+                line-height: 35px;
+            }
+        }
+
+        &__text {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            text-decoration: underline var(--tastes-hover-color);
+            margin: 30px 0px;
+            width: 267px;
+        }
+
+        &__button {
+            display: none;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 24px;
+            padding: 10px 15px;
+        }
+
+        &:hover {
+            background: var(--tastes-hover-color);
+            border-radius: 4px;
+            margin: 0px;
+
+            .tastes-item__button { display: block; }
+        }
+    }
+}
+
+@media (max-width: 1160px) {
+    .tastes-item { align-items: center; flex: 0 1 50%; }
+}
+
+@media (max-width: 600px) {
+    .tastes { justify-content: center; }
+    .tastes-item { flex: 0 1 70%; }
+}
+
+@media (max-width: 520px) {
+    .tastes-item__price { 
+        font-size: 7vw; 
+        line-height: 7vw; 
+        
+        &::after {
+            font-size: 5vw;
+            line-height: 5vw;
+        }
+    }
+
+    .tastes-item__image img { height: 50vw; width: 50vw; }
+
+    .tastes-item__text { width: 70vw; margin: 10px 0px; }
+
+    .tastes-item__button { font-size: 3vmin; padding: 9px 20px; }
+}

@@ -3,6 +3,7 @@
 @import "./header_style.scss";
 @import "./slider_style.scss";
 @import "./gifts_section_style.scss";
+@import "./tastes_section.scss";
 
 :root {
     --basic-white: #ffffff;
@@ -16,6 +17,7 @@
     --header-nav-color: rgba(135, 131, 131, 0.695);
     --button-box-color: rgba(172, 16, 0, 0.64);
     --button-text-color: rgba(160, 32, 11, 0.76);
+    --tastes-hover-color: rgba(255, 255, 255, 0.2);
 
     --search-icon: url("../img/icons-and-logo/search.png");
     --login-icon: url("../img/icons-and-logo/login.png");
@@ -23,6 +25,8 @@
     --search-icon-hover: url("../img/icons-and-logo/search--hover.png");
     --login-icon-hover: url("../img/icons-and-logo/login--hover.png");
     --cart-icon-hover: url("../img/icons-and-logo/cart--product.png");
+
+    --hit-icon: url("../img/products/product-hit.png");
 }
 
 
@@ -72,6 +76,7 @@ body {
                     -webkit-linear-gradient(180deg, var(--btn-color-1) 0%, var(--btn-color-2) 100%); 
     }
 }
+
 
 @media (max-width: 520px) {
     .back__image { background-size: 500px 400px; height: 500px; }

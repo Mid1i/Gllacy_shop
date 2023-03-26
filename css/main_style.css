@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"); /* HEADER SECTION */
 .header-top {
   align-items: center;
@@ -285,7 +286,7 @@
   align-items: stretch;
   display: flex;
   flex-wrap: wrap;
-  margin: 5vh 0px 0px;
+  margin: 5vh 0px;
   justify-content: space-between;
 }
 .gifts-item {
@@ -345,6 +346,104 @@
     padding: 9px 20px;
   }
 }
+/* TASTES SECTION */
+.tastes {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+}
+.tastes-item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  position: relative;
+  margin: 0px 0px 5vh;
+}
+.tastes-item__image {
+  position: relative;
+}
+.tastes-item__image img {
+  max-width: 100%;
+}
+.tastes-item__image::before {
+  content: var(--hit-icon);
+  position: absolute;
+}
+.tastes-item__price {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+  position: absolute;
+  top: 75%;
+  left: 0px;
+}
+.tastes-item__price::after {
+  content: "/кг";
+  font-size: 30px;
+  line-height: 35px;
+}
+.tastes-item__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  text-decoration: underline var(--tastes-hover-color);
+  margin: 30px 0px;
+  width: 267px;
+}
+.tastes-item__button {
+  display: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 10px 15px;
+}
+.tastes-item:hover {
+  background: var(--tastes-hover-color);
+  border-radius: 4px;
+  margin: 0px;
+}
+.tastes-item:hover .tastes-item__button {
+  display: block;
+}
+
+@media (max-width: 1160px) {
+  .tastes-item {
+    align-items: center;
+    flex: 0 1 50%;
+  }
+}
+@media (max-width: 600px) {
+  .tastes {
+    justify-content: center;
+  }
+  .tastes-item {
+    flex: 0 1 70%;
+  }
+}
+@media (max-width: 520px) {
+  .tastes-item__price {
+    font-size: 7vw;
+    line-height: 7vw;
+  }
+  .tastes-item__price::after {
+    font-size: 5vw;
+    line-height: 5vw;
+  }
+  .tastes-item__image img {
+    height: 50vw;
+    width: 50vw;
+  }
+  .tastes-item__text {
+    width: 70vw;
+    margin: 10px 0px;
+  }
+  .tastes-item__button {
+    font-size: 3vmin;
+    padding: 9px 20px;
+  }
+}
 :root {
   --basic-white: #ffffff;
   --basic-black: #000000;
@@ -357,12 +456,14 @@
   --header-nav-color: rgba(135, 131, 131, 0.695);
   --button-box-color: rgba(172, 16, 0, 0.64);
   --button-text-color: rgba(160, 32, 11, 0.76);
+  --tastes-hover-color: rgba(255, 255, 255, 0.2);
   --search-icon: url("../img/icons-and-logo/search.png");
   --login-icon: url("../img/icons-and-logo/login.png");
   --cart-icon: url("../img/icons-and-logo/cart.png");
   --search-icon-hover: url("../img/icons-and-logo/search--hover.png");
   --login-icon-hover: url("../img/icons-and-logo/login--hover.png");
   --cart-icon-hover: url("../img/icons-and-logo/cart--product.png");
+  --hit-icon: url("../img/products/product-hit.png");
 }
 
 body {
